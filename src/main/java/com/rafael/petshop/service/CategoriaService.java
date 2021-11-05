@@ -1,5 +1,6 @@
 package com.rafael.petshop.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -40,6 +41,11 @@ public class CategoriaService {
 		}catch(DataIntegrityViolationException e) {
 			throw new DataIntegrityException("Categoria possui produtos. Não é possível deletar.");
 		}
+	}
+
+	public List<Categoria> findAll() {
+		// TODO Auto-generated method stub
+		return repo.findAll();
 	}
 
 }
